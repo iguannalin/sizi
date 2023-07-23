@@ -11,6 +11,15 @@ window.addEventListener("load", () => {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   }
 
+  // async function getChars() {
+  //   for (let i = 2; i < 6; i++) {
+  //     await fetch(`http://ccdb.hemiola.com/characters/strokes/${i}`).then((r) => r.json()).then((d) => {
+  //       d.forEach((c) => chars.push(c.string));
+  //     })
+  //   }
+  // }
+  // getChars.then(() => console.log(chars));
+
   function makePhrase() {
     if (!chars) return;
     phElem.innerHTML = "";
