@@ -23,8 +23,8 @@ window.addEventListener("load", () => {
   // getChars().then(() => console.log(chars));
 
   function makePhrase() {
-    if (!chars) return;
-    difficulty = difficulty >= 21 ? difficulty = 2 : difficulty + 1;
+    if (!chars || !chars[2]) return;
+    difficulty = difficulty >= 20 ? difficulty = 2 : difficulty + 1;
     phElem.innerHTML = "";
     stElem.innerHTML = difficulty;
     for (let i = 0; i < 4; i++) {
@@ -34,5 +34,5 @@ window.addEventListener("load", () => {
   }
   
   makePhrase();
-  phElem.addEventListener('click', makePhrase);
+  document.body.addEventListener('click', makePhrase);
 });
